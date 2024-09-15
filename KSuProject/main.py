@@ -1,5 +1,6 @@
 import pygame as pg
 import json as js
+from ui import Button
 
 
 HEIGHT = 500
@@ -17,7 +18,7 @@ def MixCol(col0: pg.Color, col1: pg.Color):
 
     return (red, green, blue)
 
-class CircleTextButton:
+class Button:
     def __init__(self, text: str, radius) -> None:
         self.text = text
         self.radius = radius
@@ -172,10 +173,10 @@ def LoadLevel(level: dict):
 
 BGcolor = pg.Color(10, 10, 20)
 
-ButtonD = CircleTextButton("D", 25)
-ButtonF = CircleTextButton("F", 25)
-ButtonJ = CircleTextButton("J", 25)
-ButtonK = CircleTextButton("K", 25)
+ButtonD = Button("D", 25)
+ButtonF = Button("F", 25)
+ButtonJ = Button("J", 25)
+ButtonK = Button("K", 25)
 
 InGame = True
 GO = False
@@ -188,7 +189,7 @@ Rectangles = LoadLevel(LevelDict)
 Time = 0
 Error = 0
 
-Speed = 0.75
+Speed = 0.5
 
 
 running = True
