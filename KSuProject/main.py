@@ -208,6 +208,9 @@ while running:
     J = int(Keys[pg.K_j])
     K = int(Keys[pg.K_k])
 
+    if Keys[pg.K_r]:
+        Error = 150
+        
 
     for event in pg.event.get():
 
